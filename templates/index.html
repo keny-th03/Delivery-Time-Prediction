@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Time Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            background-image: url("{{ url_for('static', filename='delivery.png') }}");
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: 420px;
+            padding: 40px;
+            min-height: 100vh;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #43a047;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>📦 Delivery Time Predictor</h2>
+    <form action="/predict" method="post">
+        <label>Product Price:</label><br>
+        <input type="number" name="price" required><br><br>
+
+        <label>Freight Value:</label><br>
+        <input type="number" name="freight_value" required><br><br>
+
+        <label>Review Score (1-5):</label><br>
+        <input type="number" name="review_score" min="1" max="5" required><br><br>
+
+        <label>Purchase Weekday (0=Mon ... 6=Sun):</label><br>
+        <input type="number" name="purchase_weekday" min="0" max="6" required><br><br>
+
+        <button type="submit">Predict Delivery Time</button>
+    </form>
+</div>
+</body>
+</html>

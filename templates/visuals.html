@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Model Visualizations</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin: 30px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>📊 Model & Data Visualizations</h2>
+
+    <img src="{{ url_for('static', filename='plots/delivery_time_dist.png') }}">
+    <img src="{{ url_for('static', filename='plots/product_category.png') }}">
+    <img src="{{ url_for('static', filename='plots/review_vs_delivery.png') }}">
+    <img src="{{ url_for('static', filename='plots/freight_vs_delivery.png') }}">
+    <img src="{{ url_for('static', filename='plots/late_vs_ontime.png') }}">
+    <img src="{{ url_for('static', filename='plots/correlation.png') }}">
+    <img src="{{ url_for('static', filename='plots/model_comparison.png') }}">
+    <img src="{{ url_for('static', filename='plots/actual_vs_predicted_RF.png') }}">
+
+    <button class="back-btn" onclick="history.back()">⬅ Back to Prediction Result</button>
+    
+    <style>
+        .back-btn {
+            display: block;                /* center horizontally */
+            margin: 30px auto;             /* top/bottom 30px, horizontal center */
+            padding: 12px 25px;            
+            font-size: 16px;               
+            font-weight: bold;
+            color: white;                /* text color */
+            background-color: #4CAF50;   /* main button color (green) */
+            border: none;
+            border-radius: 8px;            /* rounded corners */
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);     /* subtle shadow */
+            transition: background-color 0.3s, transform 0.2s;
+        }
+    
+        .back-btn:hover {
+            background-color: #43a047;     /* darker green on hover */
+            transform: translateY(-2px);     /* slight lift effect */
+        }
+    </style>
+
+</body>
+
+</html>
