@@ -48,7 +48,7 @@ All plots are saved inside static/plots/:
 
 📌 Dataset Source
 ▹ Brazilian E-Commerce Public Dataset by Olist
-▹ Available on Kaggle
+▹ Available on Kaggle (https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data)
 
 ✨ Author
 KENI THAPA
